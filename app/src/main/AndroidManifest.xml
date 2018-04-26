@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yuanyuanzhou.weball">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".welcome_page">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".registration_page" />
+        <activity android:name=".home_page" />
+        <activity android:name=".login_page" />
+        <activity android:name=".Create1Activity" />
+        <activity android:name=".Create2Activity" />
+        <activity android:name=".Create3Activity" />
+        <activity android:name=".Create4Activity" />
+        <activity android:name=".me_page" />
+        <activity android:name=".friends_page"></activity>
+    </application>
+
+</manifest>
