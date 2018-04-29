@@ -4,9 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.content.Intent;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.FirebaseDatabase;
 
 
 //public class Create1Activity extends AppCompatActivity {
@@ -22,6 +28,10 @@ import android.widget.TextView;
 public class Create1Activity extends AppCompatActivity {
 
     private TextView tv;
+    private Button mContinueBtn;
+    private Button mCancelBtn;
+    private RadioGroup radgroup;
+    private RadioButton mRadGameType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,21 +39,57 @@ public class Create1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_create1);
 
 
-//        Intent i=getIntent();//因为Mian2Activity是通过intend来启动的，所以通过getIntend来获取与这个Activity相关的数据
-//        tv = (TextView) findViewById(R.id.tv22);
-//        tv.setText(i.getStringExtra("data"));//因为MainActivity里通过putExtra传递时名字是data，值是nihao
+
+        mContinueBtn = (Button)  findViewById(R.id.buttonCreateContinue1);
+        mCancelBtn = (Button)  findViewById(R.id.buttonCreateCancel1);
 
 
-        findViewById(R.id.buttonCreateContinue1).setOnClickListener(new View.OnClickListener(){
+
+
+        radgroup = (RadioGroup) findViewById(R.id.radioGroupCreateType);
+        radgroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radbtn = findViewById(checkedId);
+            }
+        });
+        mRadGameType = findViewById(radgroup.getCheckedRadioButtonId());
+
+
+
+
+        mContinueBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
-                Intent i = new Intent(Create1Activity.this, Create2Activity.class);
 
-//                i.putExtra("data","nihao");//用putExtra把内容传送到另一个Activity,名字是data，值是nihao
-                startActivity(i);//启动第二个activity并把i传递过去
+//                if (mRadGameType != null) {
+//                    Intent i = new Intent(Create1Activity.this, Create2Activity.class);
+////                String postTo = mRadpostTo.getText().toString();
+////                i.putExtra("numberPlayer",number);
+//                    startActivity(i);//启动第二个activity并把i传递过去
+//                }
+                Intent i = new Intent(Create1Activity.this, Create2Activity.class);
+                startActivity(i);
 
             }
         });
+        mCancelBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public  void onClick(View v) {
+                Intent i = new Intent(Create1Activity.this, home_page.class);
+                startActivity(i);//启动第二个activity并把i传递过去
+            }
+        });
+
+
+
+
+
+
+
+
+
+
 
 
     }

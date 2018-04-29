@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "737890731728",
+    "firebase_url": "https://weball-1b22b.firebaseio.com",
+    "project_id": "weball-1b22b",
+    "storage_bucket": "weball-1b22b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737890731728:android:2462e4b892f3465a",
+        "android_client_info": {
+          "package_name": "com.example.yuanyuanzhou.weball"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737890731728-g2mhdn4pg0nnal790d98uadtqt4pieu7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yuanyuanzhou.weball",
+            "certificate_hash": "9f6cfc47293a929a8ea5fae5c4725ac509801c33"
+          }
+        },
+        {
+          "client_id": "737890731728-gt14949682flb69egho9dtv5ih3lrn5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjaZI0es2wywanG2nddFpF8rqQFLjot-c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737890731728-gt14949682flb69egho9dtv5ih3lrn5v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
