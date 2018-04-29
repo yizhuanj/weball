@@ -16,6 +16,7 @@ public class Create3Activity extends AppCompatActivity {
     private Button mCancelBtn;
     private RadioGroup radgroup;
     private RadioButton mRadpostTo;
+//    private String postTo;
 
 
 
@@ -32,7 +33,6 @@ public class Create3Activity extends AppCompatActivity {
         mContinueBtn = findViewById(R.id.buttonCreateContinue3);
         mCancelBtn = findViewById(R.id.buttonCreateCancel3);
 
-
         radgroup = (RadioGroup) findViewById(R.id.radioGroupCreateTo);
         //第一种获得单选按钮值的方法
         //为radioGroup设置一个监听器:setOnCheckedChanged()
@@ -42,8 +42,8 @@ public class Create3Activity extends AppCompatActivity {
 //                RadioButton radbtn = (RadioButton) findViewById(checkedId);
             }
         });
-        mRadpostTo = findViewById(radgroup.getCheckedRadioButtonId());
-//        String postTo = mRadpostTo.getText().toString();
+
+//        postTo = mRadpostTo.getText().toString();
 //        Log.e("postTo is:", "")
 
 
@@ -52,13 +52,20 @@ public class Create3Activity extends AppCompatActivity {
         mContinueBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {
+                mRadpostTo = findViewById(radgroup.getCheckedRadioButtonId());
+
 
 //                if (mCreateNumber != null) {
                     Intent i = new Intent(Create3Activity.this, Create4Activity.class);
+
                     int number = Integer.parseInt(mCreateNumber.getText().toString());
-//                    String postTo = mRadpostTo.getText().toString();
-                    i.putExtra("numberPlayer",number);
-//                    i.putExtra("postTo",postTo);
+                    String postTo = mRadpostTo.getText().toString();
+
+                    Bundle extras = new Bundle();
+                    extras.putString("postTo",postTo);
+                    extras.putInt("numberOfPlayer", number);
+                    i.putExtras(extras);
+
                     startActivity(i);//启动第二个activity并把i传递过去
 //                }
             }

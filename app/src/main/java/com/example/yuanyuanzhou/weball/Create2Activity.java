@@ -41,6 +41,7 @@ public class Create2Activity extends AppCompatActivity {
 
         mContinueBtn = (Button)  findViewById(R.id.buttonCreateContinue2);
         mCancelBtn = (Button)  findViewById(R.id.buttonCreateCancel2);
+
         mContinueBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public  void onClick(View v) {

@@ -41,14 +41,19 @@ public class Create4Activity extends AppCompatActivity {
         mPostBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getIntent();
+//                Intent intent = getIntent();
 
-                int numberPlayer = intent.getIntExtra("numberPlayer", 0);
-//                String postTo = intent.getStringExtra("postTo");
+
+                Bundle extras = getIntent().getExtras();
+                int numberPlayer = extras.getInt("numberOfPlayer",0);
+                assert extras != null;
+                String postTo = extras.getString("postTo", "public");
                 String comment = mCreateComment.getText().toString().trim();
+//                Toast.makeText(this, "A email address, a password and a username are required!", Toast.LENGTH_SHORT).show();
 
-//                startPosting(comment, numberPlayer, postTo);
-                startPosting(comment, numberPlayer);
+                startPosting(comment, numberPlayer, postTo);
+//                startPosting(comment, numberPlayer);
+//                startPosting(comment, postTo);
 
 
                 Intent i = new Intent(Create4Activity.this, home_page.class);
@@ -67,11 +72,12 @@ public class Create4Activity extends AppCompatActivity {
 
     }
 
-//    private void startPosting(String comment, int numberPlayer, String postTo){
-    private void startPosting(String comment, int numberPlayer){
+    private void startPosting(String comment, int numberPlayer, String postTo){
+//    private void startPosting(String comment, int numberPlayer){
+//  private void startPosting(String comment, String postTo){
 
         DatabaseReference newPost = mDatabase.push();
-//        newPost.child("postTo").setValue(postTo);
+        newPost.child("postTo").setValue(postTo);
         newPost.child("numberOfPlayers").setValue(numberPlayer);
         newPost.child("comment").setValue(comment);
     }
