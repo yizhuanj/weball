@@ -56,9 +56,9 @@ public class Create4Activity extends AppCompatActivity {
         assert extras != null;
         postTo = extras.getString("postTo", "public");
 
-        mPostGameType.setText("Game Type: " + Integer.toString(numberPlayer));
-        mPostStartTime.setText("Start Time: " + Integer.toString(numberPlayer));
-        mPostEndTime.setText("End Time: " + Integer.toString(numberPlayer));
+        mPostGameType.setText("Game Type: " );
+        mPostStartTime.setText("Start Time: ");
+        mPostEndTime.setText("End Time: " );
         mPostLocation.setText("Location: ");
         mPostNumber.setText("Number of Players needed: " + Integer.toString(numberPlayer));
 
@@ -92,9 +92,15 @@ public class Create4Activity extends AppCompatActivity {
 //  private void startPosting(String comment, String postTo){
 
         DatabaseReference newPost = mDatabase.push();
-        newPost.child("postTo").setValue(postTo);
-        newPost.child("numberOfPlayers").setValue(numberPlayer);
-        newPost.child("comment").setValue(comment);
+//        newPost.child("postTo").setValue(postTo);
+        newPost.child("num").setValue(numberPlayer);
+//        newPost.child("num").setValue(2);
+        newPost.child("comments").setValue(comment);
+//        newPost.child("comments").setValue("Bring you own ball.");
+        newPost.child("location").setValue("4614 5TH Ave.");
+        newPost.child("sport").setValue("Basketball");
+        newPost.child("time").setValue("May-05-2018 10:00 - 11:30");
+//        lista.add(new Game("Basketball", "4614 5TH Ave.", "Bring you own ball.", "May-05-2018 10:00 - 11:30", 2));
     }
 
 

@@ -9,6 +9,14 @@ import android.app.DialogFragment;
 import android.app.Dialog;
 import java.util.Calendar;
 import android.widget.DatePicker;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
@@ -16,6 +24,7 @@ import android.widget.DatePicker;
  */
 public class DatePickerFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener{
+    private TextView textViewDate;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
@@ -36,7 +45,8 @@ public class DatePickerFragment extends DialogFragment
 //        TextView tv = (TextView) getActivity().findViewById(R.id.tv);
         //Set a message for user
 //        tv.setText("Your chosen time is...\n\n");
-        
+
+
 
     }
 }
