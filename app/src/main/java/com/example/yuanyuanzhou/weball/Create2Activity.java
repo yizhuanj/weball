@@ -32,10 +32,10 @@ public class Create2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create2);
-
-        mConditionTextView = (TextView)findViewById(R.id.textViewCondition);
-        mButtonSunny = (Button)findViewById(R.id.buttonSunny);
-        mButtonFoggy = (Button)findViewById(R.id.buttonFoggy);
+//
+//        mConditionTextView = (TextView)findViewById(R.id.textViewCondition);
+//        mButtonSunny = (Button)findViewById(R.id.buttonSunny);
+//        mButtonFoggy = (Button)findViewById(R.id.buttonFoggy);
 
 
 
@@ -58,6 +58,10 @@ public class Create2Activity extends AppCompatActivity {
         });
 
 
+    }
+    public void createShowMap(View v) {
+        Intent intent = new Intent (this, MapsActivity.class);
+        startActivity(intent);
     }
 
 //    @Override

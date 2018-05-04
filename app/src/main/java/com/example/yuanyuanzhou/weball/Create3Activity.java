@@ -55,7 +55,7 @@ public class Create3Activity extends AppCompatActivity {
                 mRadpostTo = findViewById(radgroup.getCheckedRadioButtonId());
 
 
-//                if (mCreateNumber != null) {
+                if (mCreateNumber != null && mRadpostTo != null) {
                     Intent i = new Intent(Create3Activity.this, Create4Activity.class);
 
                     int number = Integer.parseInt(mCreateNumber.getText().toString());
@@ -67,7 +67,7 @@ public class Create3Activity extends AppCompatActivity {
                     i.putExtras(extras);
 
                     startActivity(i);//启动第二个activity并把i传递过去
-//                }
+                }
             }
         });
         mCancelBtn.setOnClickListener(new View.OnClickListener(){
@@ -77,8 +77,7 @@ public class Create3Activity extends AppCompatActivity {
                 startActivity(i);//启动第二个activity并把i传递过去
             }
         });
-
-
-
     }
+
+
 }

@@ -7,8 +7,6 @@
     tools:context=".Create1Activity">
 
 
-
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -20,6 +18,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:text="Select Game"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,28 +51,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Basketball" />
+                android:text="Basketball"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radioButtonCreateTable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Table Tennis" />
+                android:text="Table Tennis"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radioButtonCreateBad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Badminton" />
+                android:text="Badminton"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radioButtonCreateTennis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tennis" />
+                android:text="Tennis"
+                android:textSize="18sp" />
 
         </RadioGroup>
     </LinearLayout>
@@ -86,44 +89,77 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="20dp"
         android:text="Select Time"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="314dp"
-        android:layout_height="93dp"
+        android:layout_width="358dp"
+        android:layout_height="204dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        <EditText
-            android:id="@+id/editTextCreateDate"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/buttonDate"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:text="Date:" />
+            android:onClick="showDatePickerDialog"
+            android:text="Select Date"
+            android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/editTextCreateTime"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="time"
-            android:text="Time:" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="showTimePickerDialog"
+                android:text="Select end Time"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/buttonStarTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="showTimePickerDialog"
+                android:text="Select start Time"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="254dp"
-        android:layout_height="72dp"
+        android:layout_width="250dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -135,7 +171,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.768">
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/buttonCreateContinue1"
@@ -153,22 +189,6 @@
             android:background="@color/colorPrimary"
             android:text="CANCEL" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv22"
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-
-
-
 
 
 </android.support.constraint.ConstraintLayout>

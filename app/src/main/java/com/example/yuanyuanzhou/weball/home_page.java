@@ -20,8 +20,19 @@ public class home_page extends Activity {
         Intent intent = new Intent (this, Create1Activity.class);
         startActivity(intent);
     }
+    public void buttonDiscover (View view){
+        Intent intent = new Intent (this, DiscoverGameActivity.class);
+        startActivity(intent);
+    }
+
+
+
     public void meButton (View view) {
         Intent intent = new Intent(this, me_page.class);
+        startActivity(intent);
+    }
+    public void buttonMyGames (View view) {
+        Intent intent = new Intent(this, ShowFiltered.class);
         startActivity(intent);
     }
 

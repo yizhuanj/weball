@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">weball</string>
     <string name="email_address">Email Address</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

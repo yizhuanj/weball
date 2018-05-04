@@ -1,5 +1,6 @@
 package com.example.yuanyuanzhou.weball;
 
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,6 +33,16 @@ public class Create1Activity extends AppCompatActivity {
     private Button mCancelBtn;
     private RadioGroup radgroup;
     private RadioButton mRadGameType;
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getFragmentManager(), "timePicker");
+    }
+
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getFragmentManager(), "datePicker");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,17 +91,6 @@ public class Create1Activity extends AppCompatActivity {
                 startActivity(i);//启动第二个activity并把i传递过去
             }
         });
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

@@ -7,9 +7,6 @@
     tools:context=".Create3Activity">
 
 
-
-
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -21,11 +18,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Number of Players"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <EditText
         android:id="@+id/createNumberPlayer"
@@ -35,7 +33,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,50 +44,61 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="Post To"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createNumberPlayer" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.577" />
 
     <RadioGroup
         android:id="@+id/radioGroupCreateTo"
         android:layout_width="215dp"
         android:layout_height="82dp"
+        android:layout_marginBottom="120dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <RadioButton
             android:id="@+id/radioButtonCreatePublic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Public" />
+            android:text="Public"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radioButtonCreatePrivate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Private" />
+            android:text="Private"
+            android:textSize="18sp" />
     </RadioGroup>
 
 
-
     <LinearLayout
-        android:layout_width="258dp"
-        android:layout_height="70dp"
+        android:id="@+id/linearLayout5"
+        android:layout_width="257dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -99,10 +108,9 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.905">
+        app:layout_constraintVertical_bias="1.0">
 
         <Button
             android:id="@+id/buttonCreateContinue3"
