@@ -38,6 +38,9 @@
         <activity android:name=".MyGamesActivity" />
         <activity android:name=".DiscoverGameActivity" />
         <activity android:name=".ShowFiltered" />
+        <activity android:name=".Tim_page" />
+        <activity android:name=".Sophie_page" />
+        <activity android:name=".Amy_page" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -36,7 +36,7 @@ public class me_page extends AppCompatActivity {
     //private FireBase mRef;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-    DatabaseReference mRef = database.getReference("https://weball-master.firebaseio.com/users/-LBDpVXMFoW5I-3c51XF/username");
+//    DatabaseReference mRef = database.getReference("https://weball-master.firebaseio.com/users/-LBDpVXMFoW5I-3c51XF/username");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,21 +45,21 @@ public class me_page extends AppCompatActivity {
 
         mName = (TextView) findViewById(R.id.name);
 
-        mRef.addValueEventListener(new ValueEventListener(){
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                mName.setText(value);
+//        mRef.addValueEventListener(new ValueEventListener(){
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                String value = dataSnapshot.getValue(String.class);
+//                mName.setText(value);
+//
+//
+//            }
 
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-
-            }
-        });
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//
+//            }
+//        });
 
     }
 
